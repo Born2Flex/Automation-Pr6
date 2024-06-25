@@ -1,5 +1,5 @@
-Feature: Math Service
-  Scenario Outline: Save equation
+Feature: Save equation functionality
+  Scenario Outline: Save equation successfully
     Given the equation "<equation>"
     When I save the equation "<equation>"
     Then the equation is saved successfully

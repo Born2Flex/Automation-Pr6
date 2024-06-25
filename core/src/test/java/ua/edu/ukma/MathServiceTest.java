@@ -39,7 +39,7 @@ class MathServiceTest {
 
     @Test
     void testSaveEquation_InvalidEquation() {
-//        Assumptions.assumeFalse(System.getProperty("os.name").contains("Windows"), "Test disabled on Windows");
+        Assumptions.assumeFalse(System.getProperty("os.name").contains("Windows"), "Test disabled on Windows");
         MathService mathService = new MathService(parser, evaluator, repository);
         when(parser.validateParentheses(anyString())).thenReturn(false);
         EquationException exception = assertThrows(EquationException.class, () -> mathService.saveEquation("invalid equation"));
