@@ -43,7 +43,7 @@ class SeleniumTests {
     }
 
     @Test
-    void testNavigateToSpringBootWebsite() {
+    void testDropDownList_SelectElement() {
         driver.get("https://bonigarcia.dev/selenium-webdriver-java/web-form.html");
         WebElement datalist = wait.until(ExpectedConditions.presenceOfElementLocated(By.name("my-datalist")));
         datalist.click();
@@ -54,7 +54,7 @@ class SeleniumTests {
     }
 
     @Test
-    void testExplicitWait() {
+    void testExplicitWaitingUntilImageDisplayed() {
         driver.get("https://bonigarcia.dev/selenium-webdriver-java/loading-images.html");
         WebElement compass = wait.until(ExpectedConditions.presenceOfElementLocated(By.id("compass")));
         assertTrue(compass.getAttribute("src").contains("img/compass.png"));
